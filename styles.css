@@ -1,0 +1,377 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title{
+      text-align: left;
+  }
+  
+  nav {
+    background-color: #000066; /* Background color of the navigation bar */
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff; /* Text color for the title and button */
+    position: fixed; /* This will fix position of nav bar */
+    justify-content: space-between; /* To push the title and button to the opposite sides */
+    z-index: 1;
+  }
+  
+  .navbar-left h1 {
+    margin: 0; 
+  }
+  
+  .navbar-right a {
+    text-decoration: none;
+    /* background-color: #ff8809; Background color of the button*/
+    color: #fff; /* Text color for the button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-weight: 550;
+  }
+
+  /* ###Content### */
+
+  section {
+    height: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  /* Add the background image to the desired section */
+  #home {
+    color: #000000; /* Set text color for better visibility */
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: #000000;
+  }
+
+  #home a{
+    text-decoration: none;
+    background-color: #99FFFF;
+    color: #000; /* Text color for the button */
+    border: none;
+    padding: 80px 120px;
+    border-radius: 30PX;
+    cursor: pointer;
+    transition: .5s ease;
+  }
+
+  #home a:hover{
+    text-decoration: none;
+    background-color: #000033;
+    color: #fff; /* Text color for the button */
+    border: none;
+    padding: 80px 120px;
+    border-radius: 30PX;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.15);
+}
+
+
+  #c {
+    margin-right: 20px;
+  }
+  
+  .navbar-right a:hover{
+    background-color: #66CCFF; /* Background color of the button */
+    color: #fff; /* Text color for the button */
+    border: none;
+    transform: scale(1.2);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 50px rgba(255, 0, 0, 0.8);
+  }
+  
+  footer {
+    background-color: #000066;
+    padding: 3px 5px;
+    text-align: center;
+  }
+
+  section:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+
+  .active {
+    background-color: #66CCFF;
+  }
+
+  .inactive {
+    background-color: #0066FF;
+  }
+.banner-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* เพิ่มเอฟเฟกต์ของภาพเมื่อเลื่อนเมาส์ลง */
+.banner-container:hover .banner-image {
+    transform: scale(1.05);
+}
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.member {
+    max-width: 780px;
+    width: 100%;
+    margin: 20px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 200px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+.member h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 5px;
+}
+.member img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member img:hover {
+    transform: scale(1.3);
+}
+
+.member::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.member:hover::before {
+    opacity: 1;
+}
+.skill-block {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skill-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.skill-button:hover {
+    animation: rainbow 2s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: #f00;
+    }
+    16% {
+        background-color: #ff0;
+    }
+    32% {
+        background-color: #0f0;
+    }
+    48% {
+        background-color: #0ff;
+    }
+    64% {
+        background-color: #00f;
+    }
+    80% {
+        background-color: #f0f;
+    }
+    100% {
+        background-color: #f00;
+    }
+}
+#skills{
+  height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-image: url(https://drive.google.com/uc?id=1fUNIxb-DkAM9uddQqqGqPCVH_J0hXNQM);
+    background-size: cover;
+  
+}
+#about{
+  height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-image: url(https://drive.google.com/uc?id=1eLjtScRj3Gzz5e9sTU_2jM6bZ8PDAvfM);
+    background-size: cover;
+    background-position: center; 
+  
+}
+#education{
+  height: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-image: url(https://drive.google.com/uc?id=1mwpZCWVD1kFguld9BFOW1jW9CmbWgp5Z);
+    background-size: cover;
+    background-position: center; 
+}
+#contacts{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-image: url(https://drive.google.com/uc?id=1f8QU0pP3aYAtuRBuSIDPMP9bXSX6SQ7E);
+    background-size: cover;
+ 
+}
+
+
+.education-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.school-logo {
+  flex: 0 0 100px; /* ขนานเมื่อ 100px */
+  margin-right: 1rem;
+  transition: transform 0.3s ease; /* เพิ่ม transition เมื่อเมาส์ชี้ */
+ 
+}
+
+.school-logo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+  
+}
+
+.school-details {
+  flex: 1; /* ให้บล็อกที่เหลือเติมครอบอัตโนมัติ */
+}
+
+.school-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.school-details p {
+  margin: 0;
+}
+
+/* เมื่อมีเมาส์ชี้กับ .school-logo ให้ขยายรูป */
+.school-logo:hover {
+  transform: scale(1.1);
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.contacts {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contacts a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.contacts a img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contacts a:hover {
+    transform: scale(1.2);
+}
